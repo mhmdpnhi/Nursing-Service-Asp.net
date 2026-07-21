@@ -28,6 +28,7 @@ namespace Nursing_Service.Infrastructure.Email
 
                 using var client = new SmtpClient(_config.SmtpServer, _config.SmtpPort)
                 {
+                    UseDefaultCredentials = false,
                     Credentials = new NetworkCredential(_config.SenderEmail, _config.SenderPassword),
                     EnableSsl = true
                 };
@@ -38,6 +39,7 @@ namespace Nursing_Service.Infrastructure.Email
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Email Error: {ex.ToString()}");
                 return new SendEmailResponseModel { IsSuccessful = false, Message = ex.Message };
             }
         }
