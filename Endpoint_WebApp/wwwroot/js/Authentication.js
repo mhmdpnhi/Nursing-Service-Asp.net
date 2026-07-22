@@ -243,6 +243,21 @@ $(document).ready(function() {
         var infoModal = new bootstrap.Modal(infoModalEl);
         infoModal.show();
     }
+
+    // Email test warning
+    $('#emailModal').on('show.bs.modal', function () {
+        swal.fire({
+            title: 'توجه!',
+            text: 'به دلیل محدودیت‌های سرور تستی (عدم دسترسی به پورت SMTP)، تست این قابلیت در حال حاضر امکان‌پذیر نیست.',
+            icon: 'warning',
+            confirmButtonText: 'متوجه شدم'
+        });
+        
+        // Disable input and send button
+        $('#testEmailInput').prop('disabled', true);
+        // Find the send button inside email modal and disable it
+        $(this).find('.btn-primary-custom').prop('disabled', true);
+    });
 });
 
 function nextInfoStep() {
