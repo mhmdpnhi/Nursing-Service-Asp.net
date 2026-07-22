@@ -4,7 +4,7 @@
   <p><strong>Nursing Service Management System</strong></p>
   <p>
     <a href="https://nursing-service-aspnet-production.up.railway.app/">
-      <img src="https://img.shields.io/badge/مشاهده_آنلاین_پروژه-0d9488?style=for-the-badge&logo=vercel" alt="Live Demo" />
+      <img src="https://img.shields.io/badge/Livedemmo-0d9488?style=for-the-badge&logo=vercel" alt="Live Demo" />
     </a>
   </p>
 </div>
