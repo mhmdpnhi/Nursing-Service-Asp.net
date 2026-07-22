@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Nursing_Service.Infrastructure.SMS.Ir
@@ -24,10 +25,10 @@ namespace Nursing_Service.Infrastructure.SMS.Ir
             {
                 Mobile = mobile,
                 // TODO: Hard Code Template Id provided 
-                TemplateId = 100000,
+                TemplateId = 259700,
                 Parameters = new VerifySendParameterModel[] {
                     new VerifySendParameterModel {
-                        Name = "CODE", Value = "1234"
+                        Name = "CODE", Value = RandomNumberGenerator.GetInt32(1000, 10000).ToString()
                     }
                 }
             };
